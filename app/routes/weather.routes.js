@@ -5,9 +5,9 @@ module.exports = app => {
 
     router.post("/", weather.create);
     router.get("/", weather.findAll);
-    router.get("/published", weather.findAllPublished);
+    router.put("/:id", weather.findByIdAndUpdate);
     router.get("/:id", weather.findOne);
-    router.put("/:id", weather.update);
+    //router.put("/:id", weather.update);
     router.delete("/:id", weather.delete);
     router.delete("/", weather.deleteAll);
     app.use('/api/weather', router);

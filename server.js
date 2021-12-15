@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 require("./app/routes/weather.routes")(app);
-app.listen(6000, () => {
-    console.log(`Server is running on port 6000.`);
+
+app.listen(6060, () => {
+    console.log(`Server is running on port 6060.`);
 });
